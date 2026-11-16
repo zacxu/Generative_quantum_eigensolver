@@ -2,7 +2,7 @@
   "schema": "gqe-co2-github-source-v1",
   "prepared_date": "2026-11-16",
   "github_repository": "https://github.com/zacxu/Generative_quantum_eigensolver",
-  "scope": "Curated source, tests, launchers, small configurations and final comprehensive PDF for the completed CO2 study",
+  "scope": "Curated research source, tests, launchers, small configurations, written project paper and comprehensive report for the completed CO2 study",
   "inventory_rule": "All published files except source_manifest.json itself; paths are repository-relative",
   "source_policy": "Scientific source bytes unchanged; original registration-bound workspace preserved separately",
   "huggingface_snapshot": {
@@ -223,14 +223,14 @@
   ],
   "files": {
     ".gitignore": {
-      "bytes": 1511,
-      "sha256": "99a195420911383279d207886af789c1ea52d3acefc1c37276983809738ede0a",
-      "git_blob_sha1": "bbcd74353624802cad45a428db920788f357680b"
+      "bytes": 1536,
+      "sha256": "29af5db538550ef1d92d06dcdb53c0a0376928ea21af88754dd16fdf7d1c3dd0",
+      "git_blob_sha1": "57e78eafdc45ecfc1633f72f47576e1934e1bf48"
     },
     "README.md": {
-      "bytes": 10877,
-      "sha256": "c7181b46ec5e1ae46c6d62fb3556ecb5fba0463a9ade149482ea3d48a7231ca9",
-      "git_blob_sha1": "20397f1adf1025151ddd77086570efe29fdf53c8"
+      "bytes": 14494,
+      "sha256": "c7987dd7c63372d4c451396b38625ab2639cc4d2410fc37f60c18609850eb098",
+      "git_blob_sha1": "db7295016f2cd7a3f888428af8c56d7dc8ff851c"
     },
     "large_qubit/__init__.py": {
       "bytes": 108,
@@ -1162,6 +1162,11 @@
       "sha256": "433de5f1539779ce9b54bd63fd1ffdde50e21d4e5f04d3594f4857edf8a5fc05",
       "git_blob_sha1": "d4114cf4d9a68ed2712572883e079b433fc14be5"
     },
+    "reports/project_report.pdf": {
+      "bytes": 1521636,
+      "sha256": "27059b819ea4b344184470fae691bf5842b1aea35be70cfe056f6d780ec1b172",
+      "git_blob_sha1": "11e2472381fac9231bb743ae1a18c6036e829e70"
+    },
     "tools/section6_progress.py": {
       "bytes": 17778,
       "sha256": "5fbe7cb2972f3c7ea3f69d2413d16c6bdb63b44d3105cc2e40eda75354c0e5d8",
@@ -1185,5 +1190,24 @@
     "huggingface_url": "https://huggingface.co/datasets/bruhrelax/gqe-co2-30q-research-v1/resolve/064e24614a9092cac48b75e735693391b2b30c29/reports/comprehensive_report.pdf",
     "sha256": "433de5f1539779ce9b54bd63fd1ffdde50e21d4e5f04d3594f4857edf8a5fc05",
     "policy": "Byte-identical copy of the existing final report; no report regeneration"
+  },
+  "project_paper_provenance": {
+    "path": "reports/project_report.pdf",
+    "pages": 13,
+    "supplied_filename": "SC4055 Quantum Computing Group 13 Project Report.pdf",
+    "title": "SC4055 Group Assignment, Semester 1 AY 26/27",
+    "authors": [
+      "Teo Wei Yew",
+      "Xu Zixuan",
+      "Chong Bo Yu",
+      "Omar Jamoussi"
+    ],
+    "sha256": "27059b819ea4b344184470fae691bf5842b1aea35be70cfe056f6d780ec1b172",
+    "policy": "Byte-identical copy of the user-supplied written project paper; separate from the pinned Hugging Face release"
+  },
+  "presentation": {
+    "url": "https://youtu.be/j32O__0uP6M",
+    "supplied_link_file": "quantum com.txt",
+    "policy": "User-supplied presentation URL; tracking query omitted"
   }
 }

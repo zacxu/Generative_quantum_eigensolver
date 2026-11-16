@@ -1,4 +1,4 @@
-# Curated source and comprehensive report for the completed CO2 study.
+# Curated source and research reports for the completed CO2 study.
 # Deny by default: datasets, models and other outputs live on Hugging Face.
 # Keep historical artifacts locally; ignoring them does not delete them.
 /*
@@ -9,6 +9,7 @@
 !/reports/
 /reports/*
 !/reports/comprehensive_report.pdf
+!/reports/project_report.pdf
 
 !/large_qubit/
 /large_qubit/*
