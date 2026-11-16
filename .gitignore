@@ -1,0 +1,54 @@
+# Curated source-only release for the completed CO2 study.
+# Deny by default: data, models and scientific outputs live on Hugging Face.
+# Keep historical artifacts locally; ignoring them does not delete them.
+/*
+!/.gitignore
+!/README.md
+!/source_manifest.json
+
+!/large_qubit/
+/large_qubit/*
+!/large_qubit/*.py
+!/large_qubit/study.json
+!/large_qubit/physical_definition.json
+!/large_qubit/section3_policies.json
+!/large_qubit/section4_policy.json
+!/large_qubit/section5_policy.json
+!/large_qubit/section6_policy.json
+!/large_qubit/section6_v2_policy.json
+!/large_qubit/section7_policy.json
+!/large_qubit/requirements-analysis.txt
+!/large_qubit/requirements-chemistry.txt
+!/large_qubit/requirements-training.txt
+!/large_qubit/catalogues/
+/large_qubit/catalogues/*
+!/large_qubit/catalogues/co2_screened_v1.json
+!/large_qubit/tests/
+/large_qubit/tests/*
+!/large_qubit/tests/*.py
+!/large_qubit/scripts/
+/large_qubit/scripts/*
+!/large_qubit/scripts/*.sh
+
+# Small historical modules reused by the current implementation.
+!/phase3/
+/phase3/*
+!/phase3/__init__.py
+!/phase3/catalogue.py
+!/phase6/
+/phase6/*
+!/phase6/__init__.py
+!/phase6/grammar.py
+!/phase6/models.py
+!/phase6/model_registry.py
+!/phase6/fetch_weights.py
+!/phase6/objective.py
+!/phase6/prompts.py
+!/phase6/test_grammar.py
+!/phase6/model_lock.json
+!/phase6/model_lock.sha256
+!/tools/
+/tools/*
+!/tools/section6_progress.py
+!/tools/section6_v2_progress.py
+!/tools/section6_v2_keep_awake.py
