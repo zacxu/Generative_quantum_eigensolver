@@ -3,7 +3,7 @@
 ### A 30-qubit CO₂ case study
 
 **Teo Wei Yew · Xu Zixuan · Chong Bo Yu · Omar Jamoussi**  
-SC4055 Quantum Computing · Group 13 · Semester 1, AY 2026/27
+SC4055 Quantum Computing Research Project
 
 **[Written project paper — 13 pages](reports/project_report.pdf)** · **[Comprehensive research report — 51 pages](reports/comprehensive_report.pdf)** · **[Watch the presentation](https://youtu.be/j32O__0uP6M)** · **[Data and results](https://huggingface.co/datasets/bruhrelax/gqe-co2-30q-research-v1)**
 
