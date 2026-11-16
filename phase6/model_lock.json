@@ -1,0 +1,321 @@
+{
+  "schema": "phase6-model-lock-v1",
+  "created_utc": "2026-10-18T06:55:38.588076+00:00",
+  "shared_context_limit": 1024,
+  "native_implementations_only": true,
+  "model_training_executed": false,
+  "checkpoint_weights_downloaded": false,
+  "models": {
+    "qwen3_4b": {
+      "repo_id": "Qwen/Qwen3-4B",
+      "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "model_type": "qwen3",
+      "license": "apache-2.0",
+      "interface": "chat",
+      "template_kwargs": {
+        "enable_thinking": false
+      },
+      "model_key": "qwen3_4b",
+      "metadata_dir": "phase6/cache/models/qwen3_4b/1cfa9a7208912126459214e8b04321603b3df60c",
+      "source_api_url": "https://huggingface.co/api/models/Qwen/Qwen3-4B/revision/1cfa9a7208912126459214e8b04321603b3df60c",
+      "files": {
+        "source_api.json": {
+          "path": "phase6/cache/models/qwen3_4b/1cfa9a7208912126459214e8b04321603b3df60c/source_api.json",
+          "sha256": "cc50d989a01f6cf4a4a92697c3075971ba454eb784fab9e8d276bf94faca5c27",
+          "bytes": 9192,
+          "source_url": "https://huggingface.co/api/models/Qwen/Qwen3-4B/revision/1cfa9a7208912126459214e8b04321603b3df60c"
+        },
+        "LICENSE": {
+          "path": "phase6/cache/models/qwen3_4b/1cfa9a7208912126459214e8b04321603b3df60c/LICENSE",
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+          "bytes": 11343,
+          "source_url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/LICENSE"
+        },
+        "README.md": {
+          "path": "phase6/cache/models/qwen3_4b/1cfa9a7208912126459214e8b04321603b3df60c/README.md",
+          "sha256": "71add1cd091c309b1cb1a6b943f2476eb2b004124b3bd1d32dcd0b24cc1abc47",
+          "bytes": 16857,
+          "source_url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/README.md"
+        },
+        "config.json": {
+          "path": "phase6/cache/models/qwen3_4b/1cfa9a7208912126459214e8b04321603b3df60c/config.json",
+          "sha256": "8ba006f74fecfaaeb392872a60f4a480e7ec9860153d2e1b769ec81f9a147f8a",
+          "bytes": 726,
+          "source_url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/config.json"
+        },
+        "generation_config.json": {
+          "path": "phase6/cache/models/qwen3_4b/1cfa9a7208912126459214e8b04321603b3df60c/generation_config.json",
+          "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+          "bytes": 239,
+          "source_url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/generation_config.json"
+        },
+        "merges.txt": {
+          "path": "phase6/cache/models/qwen3_4b/1cfa9a7208912126459214e8b04321603b3df60c/merges.txt",
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "bytes": 1671853,
+          "source_url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/merges.txt"
+        },
+        "tokenizer.json": {
+          "path": "phase6/cache/models/qwen3_4b/1cfa9a7208912126459214e8b04321603b3df60c/tokenizer.json",
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "bytes": 11422654,
+          "source_url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/tokenizer.json"
+        },
+        "tokenizer_config.json": {
+          "path": "phase6/cache/models/qwen3_4b/1cfa9a7208912126459214e8b04321603b3df60c/tokenizer_config.json",
+          "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "bytes": 9732,
+          "source_url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/tokenizer_config.json"
+        },
+        "vocab.json": {
+          "path": "phase6/cache/models/qwen3_4b/1cfa9a7208912126459214e8b04321603b3df60c/vocab.json",
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "bytes": 2776833,
+          "source_url": "https://huggingface.co/Qwen/Qwen3-4B/resolve/1cfa9a7208912126459214e8b04321603b3df60c/vocab.json"
+        }
+      },
+      "config_model_type": "qwen3",
+      "config_context_limit": 40960,
+      "tokenizer_declared_context_limit": 131072,
+      "native_chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "template_source_file": "tokenizer_config.json",
+      "license_evidence": "LICENSE",
+      "trust_remote_code": false,
+      "large_weights_downloaded": false
+    },
+    "smollm3_3b": {
+      "repo_id": "HuggingFaceTB/SmolLM3-3B",
+      "revision": "a07cc9a04f16550a088caea529712d1d335b0ac1",
+      "model_type": "smollm3",
+      "license": "apache-2.0",
+      "interface": "chat",
+      "template_kwargs": {
+        "enable_thinking": false
+      },
+      "model_key": "smollm3_3b",
+      "metadata_dir": "phase6/cache/models/smollm3_3b/a07cc9a04f16550a088caea529712d1d335b0ac1",
+      "source_api_url": "https://huggingface.co/api/models/HuggingFaceTB/SmolLM3-3B/revision/a07cc9a04f16550a088caea529712d1d335b0ac1",
+      "files": {
+        "source_api.json": {
+          "path": "phase6/cache/models/smollm3_3b/a07cc9a04f16550a088caea529712d1d335b0ac1/source_api.json",
+          "sha256": "f294485c5742b13bd75440b076981a4eec8ab35867b0b182751039f99ea01b78",
+          "bytes": 11015,
+          "source_url": "https://huggingface.co/api/models/HuggingFaceTB/SmolLM3-3B/revision/a07cc9a04f16550a088caea529712d1d335b0ac1"
+        },
+        "README.md": {
+          "path": "phase6/cache/models/smollm3_3b/a07cc9a04f16550a088caea529712d1d335b0ac1/README.md",
+          "sha256": "24f16f90b883af3618425a589783a944356a7fc2e3cfa69b579c9ff06963e178",
+          "bytes": 17452,
+          "source_url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B/resolve/a07cc9a04f16550a088caea529712d1d335b0ac1/README.md"
+        },
+        "chat_template.jinja": {
+          "path": "phase6/cache/models/smollm3_3b/a07cc9a04f16550a088caea529712d1d335b0ac1/chat_template.jinja",
+          "sha256": "3e0e275a527f249670056e0078e474eadbdd007c134b4fdfae5a7b3089702814",
+          "bytes": 5598,
+          "source_url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B/resolve/a07cc9a04f16550a088caea529712d1d335b0ac1/chat_template.jinja"
+        },
+        "config.json": {
+          "path": "phase6/cache/models/smollm3_3b/a07cc9a04f16550a088caea529712d1d335b0ac1/config.json",
+          "sha256": "c72b1031274ff4626e434d0019e88e95a767460135db9ee492eb80652b786af1",
+          "bytes": 1915,
+          "source_url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B/resolve/a07cc9a04f16550a088caea529712d1d335b0ac1/config.json"
+        },
+        "generation_config.json": {
+          "path": "phase6/cache/models/smollm3_3b/a07cc9a04f16550a088caea529712d1d335b0ac1/generation_config.json",
+          "sha256": "3458d62b3f9654f4bbe285223b0f4e5a1e67cae61c92bb6aeaadf04468bf9e01",
+          "bytes": 182,
+          "source_url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B/resolve/a07cc9a04f16550a088caea529712d1d335b0ac1/generation_config.json"
+        },
+        "special_tokens_map.json": {
+          "path": "phase6/cache/models/smollm3_3b/a07cc9a04f16550a088caea529712d1d335b0ac1/special_tokens_map.json",
+          "sha256": "12403efb970f069ba62ddf3b66166a27254be4a198166b61ad1ee604bd3a4515",
+          "bytes": 289,
+          "source_url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B/resolve/a07cc9a04f16550a088caea529712d1d335b0ac1/special_tokens_map.json"
+        },
+        "tokenizer.json": {
+          "path": "phase6/cache/models/smollm3_3b/a07cc9a04f16550a088caea529712d1d335b0ac1/tokenizer.json",
+          "sha256": "7b6a500b662a34eb3f0374db856ba4ad7de4c81040571d78dc0d357238930005",
+          "bytes": 17208819,
+          "source_url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B/resolve/a07cc9a04f16550a088caea529712d1d335b0ac1/tokenizer.json"
+        },
+        "tokenizer_config.json": {
+          "path": "phase6/cache/models/smollm3_3b/a07cc9a04f16550a088caea529712d1d335b0ac1/tokenizer_config.json",
+          "sha256": "59a64b39f05ee0acf7479bbccf99a44d9e481c1a4a494eb03838ae3c35eb29be",
+          "bytes": 50387,
+          "source_url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B/resolve/a07cc9a04f16550a088caea529712d1d335b0ac1/tokenizer_config.json"
+        }
+      },
+      "config_model_type": "smollm3",
+      "config_context_limit": 65536,
+      "tokenizer_declared_context_limit": 131072,
+      "native_chat_template_sha256": "3e0e275a527f249670056e0078e474eadbdd007c134b4fdfae5a7b3089702814",
+      "template_source_file": "chat_template.jinja",
+      "license_evidence": "README.md front-matter license",
+      "trust_remote_code": false,
+      "large_weights_downloaded": false,
+      "template_clock_date": "2026-10-18"
+    },
+    "phi4_mini": {
+      "repo_id": "microsoft/Phi-4-mini-instruct",
+      "revision": "cfbefacb99257ffa30c83adab238a50856ac3083",
+      "model_type": "phi3",
+      "license": "mit",
+      "interface": "chat",
+      "template_kwargs": {},
+      "model_key": "phi4_mini",
+      "metadata_dir": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083",
+      "source_api_url": "https://huggingface.co/api/models/microsoft/Phi-4-mini-instruct/revision/cfbefacb99257ffa30c83adab238a50856ac3083",
+      "files": {
+        "source_api.json": {
+          "path": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083/source_api.json",
+          "sha256": "7d1735205f4333d5794a50cf909a0d917a31d007cbdc3a3bc33fc51960846e40",
+          "bytes": 5815,
+          "source_url": "https://huggingface.co/api/models/microsoft/Phi-4-mini-instruct/revision/cfbefacb99257ffa30c83adab238a50856ac3083"
+        },
+        "LICENSE": {
+          "path": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083/LICENSE",
+          "sha256": "fa8235e5b48faca34e3ca98cf4f694ef08bd216d28b58071a1f85b1d50cb814d",
+          "bytes": 1084,
+          "source_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/cfbefacb99257ffa30c83adab238a50856ac3083/LICENSE"
+        },
+        "NOTICE.md": {
+          "path": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083/NOTICE.md",
+          "sha256": "a3386cc7125ec75ed34d4f0a340c47782982095e251d322e01d8ecab22d87ba4",
+          "bytes": 1809,
+          "source_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/cfbefacb99257ffa30c83adab238a50856ac3083/NOTICE.md"
+        },
+        "README.md": {
+          "path": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083/README.md",
+          "sha256": "c4f34916182a3ee87d95d00c92847cfa687ab21dc338a577275f0c34cf0e1dfd",
+          "bytes": 29246,
+          "source_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/cfbefacb99257ffa30c83adab238a50856ac3083/README.md"
+        },
+        "added_tokens.json": {
+          "path": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083/added_tokens.json",
+          "sha256": "d4f2aceb0f20b71dd1f4bcc7e052e4412946bf281840b8f83d39f259571af486",
+          "bytes": 249,
+          "source_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/cfbefacb99257ffa30c83adab238a50856ac3083/added_tokens.json"
+        },
+        "config.json": {
+          "path": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083/config.json",
+          "sha256": "ac65d86061d3d0d704ee2511fd0eb8713ef19eb6eedba17c3080a4165d5b933b",
+          "bytes": 2504,
+          "source_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/cfbefacb99257ffa30c83adab238a50856ac3083/config.json"
+        },
+        "generation_config.json": {
+          "path": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083/generation_config.json",
+          "sha256": "3e3f48753753f92d2b958679151861d4fd7bf26e4dfc41fd47056116c4914dcd",
+          "bytes": 168,
+          "source_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/cfbefacb99257ffa30c83adab238a50856ac3083/generation_config.json"
+        },
+        "merges.txt": {
+          "path": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083/merges.txt",
+          "sha256": "856ce61180bb689282eed6b3a6838bb1f438399be23aefe9d20eb379791fb4ad",
+          "bytes": 2418348,
+          "source_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/cfbefacb99257ffa30c83adab238a50856ac3083/merges.txt"
+        },
+        "special_tokens_map.json": {
+          "path": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083/special_tokens_map.json",
+          "sha256": "aff38493227d813e29fcf8406e8e90062f1f031aa47d589325e9c31d89ac7cc3",
+          "bytes": 587,
+          "source_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/cfbefacb99257ffa30c83adab238a50856ac3083/special_tokens_map.json"
+        },
+        "tokenizer.json": {
+          "path": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083/tokenizer.json",
+          "sha256": "382cc235b56c725945e149cc25f191da667c836655efd0857b004320e90e91ea",
+          "bytes": 15524095,
+          "source_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/cfbefacb99257ffa30c83adab238a50856ac3083/tokenizer.json"
+        },
+        "tokenizer_config.json": {
+          "path": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083/tokenizer_config.json",
+          "sha256": "9c9b6bc0c94d95f69f826c41069a3e8b387ac3ced89601d201886e99240ac9db",
+          "bytes": 2932,
+          "source_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/cfbefacb99257ffa30c83adab238a50856ac3083/tokenizer_config.json"
+        },
+        "vocab.json": {
+          "path": "phase6/cache/models/phi4_mini/cfbefacb99257ffa30c83adab238a50856ac3083/vocab.json",
+          "sha256": "6cb65a857824fa6615bb1782d95d882617a8bbce1da0317118586b36f39e98bd",
+          "bytes": 3910310,
+          "source_url": "https://huggingface.co/microsoft/Phi-4-mini-instruct/resolve/cfbefacb99257ffa30c83adab238a50856ac3083/vocab.json"
+        }
+      },
+      "config_model_type": "phi3",
+      "config_context_limit": 131072,
+      "tokenizer_declared_context_limit": 131072,
+      "native_chat_template_sha256": "febf589225c9728ab791f52e8897d7607a823d45368f0a4c92fa68997b40cce9",
+      "template_source_file": "tokenizer_config.json",
+      "license_evidence": "LICENSE",
+      "trust_remote_code": false,
+      "large_weights_downloaded": false
+    },
+    "gpt2_xl": {
+      "repo_id": "openai-community/gpt2-xl",
+      "revision": "15ea56dee5df4983c59b2538573817e1667135e2",
+      "model_type": "gpt2",
+      "license": "mit",
+      "interface": "completion",
+      "template_kwargs": {},
+      "model_key": "gpt2_xl",
+      "metadata_dir": "phase6/cache/models/gpt2_xl/15ea56dee5df4983c59b2538573817e1667135e2",
+      "source_api_url": "https://huggingface.co/api/models/openai-community/gpt2-xl/revision/15ea56dee5df4983c59b2538573817e1667135e2",
+      "files": {
+        "source_api.json": {
+          "path": "phase6/cache/models/gpt2_xl/15ea56dee5df4983c59b2538573817e1667135e2/source_api.json",
+          "sha256": "f7395ae30c926dec919a558aca835e91bbb8a885909b405cb08529059a39f143",
+          "bytes": 4340,
+          "source_url": "https://huggingface.co/api/models/openai-community/gpt2-xl/revision/15ea56dee5df4983c59b2538573817e1667135e2"
+        },
+        "README.md": {
+          "path": "phase6/cache/models/gpt2_xl/15ea56dee5df4983c59b2538573817e1667135e2/README.md",
+          "sha256": "83acf576ac2b22546b139ba48e690bace7c1de4b40c65d2fbd1cc9950eda75dd",
+          "bytes": 11973,
+          "source_url": "https://huggingface.co/openai-community/gpt2-xl/resolve/15ea56dee5df4983c59b2538573817e1667135e2/README.md"
+        },
+        "config.json": {
+          "path": "phase6/cache/models/gpt2_xl/15ea56dee5df4983c59b2538573817e1667135e2/config.json",
+          "sha256": "be48115d52314bc27327e160bf10197760db02ea689d10adb24db4102edf7a8a",
+          "bytes": 689,
+          "source_url": "https://huggingface.co/openai-community/gpt2-xl/resolve/15ea56dee5df4983c59b2538573817e1667135e2/config.json"
+        },
+        "generation_config.json": {
+          "path": "phase6/cache/models/gpt2_xl/15ea56dee5df4983c59b2538573817e1667135e2/generation_config.json",
+          "sha256": "b90eadacf585a743a30ea51e8b5c88b8d282a2a34dc0c7e556d0987cdbd68805",
+          "bytes": 124,
+          "source_url": "https://huggingface.co/openai-community/gpt2-xl/resolve/15ea56dee5df4983c59b2538573817e1667135e2/generation_config.json"
+        },
+        "merges.txt": {
+          "path": "phase6/cache/models/gpt2_xl/15ea56dee5df4983c59b2538573817e1667135e2/merges.txt",
+          "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+          "bytes": 456318,
+          "source_url": "https://huggingface.co/openai-community/gpt2-xl/resolve/15ea56dee5df4983c59b2538573817e1667135e2/merges.txt"
+        },
+        "tokenizer.json": {
+          "path": "phase6/cache/models/gpt2_xl/15ea56dee5df4983c59b2538573817e1667135e2/tokenizer.json",
+          "sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6",
+          "bytes": 1355256,
+          "source_url": "https://huggingface.co/openai-community/gpt2-xl/resolve/15ea56dee5df4983c59b2538573817e1667135e2/tokenizer.json"
+        },
+        "tokenizer_config.json": {
+          "path": "phase6/cache/models/gpt2_xl/15ea56dee5df4983c59b2538573817e1667135e2/tokenizer_config.json",
+          "sha256": "5e04eb606e3a1583530a42e36c2a6b6615c86f34fe77e44d9ddeb43ff940931f",
+          "bytes": 26,
+          "source_url": "https://huggingface.co/openai-community/gpt2-xl/resolve/15ea56dee5df4983c59b2538573817e1667135e2/tokenizer_config.json"
+        },
+        "vocab.json": {
+          "path": "phase6/cache/models/gpt2_xl/15ea56dee5df4983c59b2538573817e1667135e2/vocab.json",
+          "sha256": "196139668be63f3b5d6574427317ae82f612a97c5d1cdaf36ed2256dbf636783",
+          "bytes": 1042301,
+          "source_url": "https://huggingface.co/openai-community/gpt2-xl/resolve/15ea56dee5df4983c59b2538573817e1667135e2/vocab.json"
+        }
+      },
+      "config_model_type": "gpt2",
+      "config_context_limit": 1024,
+      "tokenizer_declared_context_limit": 1024,
+      "native_chat_template_sha256": null,
+      "template_source_file": null,
+      "license_evidence": "README.md front-matter license",
+      "trust_remote_code": false,
+      "large_weights_downloaded": false
+    }
+  }
+}

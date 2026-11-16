@@ -1,0 +1,7 @@
+# Isolated Linux/WSL Section 3 numerical validation environment, Python 3.12.
+# Keep the historical Windows/server training environment unchanged.
+numpy==2.2.6
+scipy==1.15.3
+h5py==3.14.0
+pyscf==2.11.0
+setuptools==80.9.0

@@ -1,0 +1,206 @@
+{
+  "accelerators": {
+    "allocation_identity": "distinct_GPU_UUID_masks",
+    "distributed_training": false,
+    "fits_per_gpu": 1,
+    "requested": "three_H200",
+    "visible_gpus_per_worker": 1,
+    "worker_device": "cuda:0"
+  },
+  "attention_implementation": "eager",
+  "batch_candidates": [
+    [
+      4,
+      4
+    ],
+    [
+      8,
+      2
+    ],
+    [
+      16,
+      1
+    ],
+    [
+      1,
+      16
+    ]
+  ],
+  "batch_selection": "fastest_minimum_throughput_across_paired_GPT_reports; Qwen_fastest; declared_order_breaks_ties",
+  "benchmark_measured_steps_per_candidate": 3,
+  "benchmark_memory_probe": "warmup_on_16_longest_complete_fitting_contexts; peaks_include_warmup",
+  "benchmark_warmup_steps_per_candidate": 1,
+  "cache": {
+    "deep_native_validation": {
+      "path": "large_qubit/evidence/sections_1_7_v1/data_validation.json",
+      "sha256": "4e058a5a27b45fa0369fe35c130325e06a788a710f1d7f8ec71b87758027e2ea"
+    },
+    "diagnostics_accessible_to_training": false,
+    "gpt_pair_shared": true,
+    "manifest_sha256": {
+      "gpt2_xl": "f249b19110fb88c4d8170e8709b5e43e03a3def972615318b6e68d6d5bff8ca7",
+      "qwen3_4b": "753516ba33f211247b4ee0ed2405a2a08c94004dfc7ec16f496af38aee84d365"
+    },
+    "root": "large_qubit/training_data/section7_v1",
+    "routine_loading": "authenticate_prevalidated_manifest_source_metadata_and_payload_hashes",
+    "stores": "prompts_answer_token_ids_deduplicated_grammar_choices"
+  },
+  "checkpoint_selection": "final",
+  "conditions": {
+    "gpt2_xl_uniform_lora": {
+      "adapter_initialization_seed": 6028043142108095537,
+      "adapter_targets": null,
+      "checkpoint_selection": "final",
+      "condition_id": "gpt2_xl_uniform_lora",
+      "configuration_status": "declaration_not_executable_training_config",
+      "corpus_role": "new_shared_co2_fitting_release",
+      "effective_batch_size": 16,
+      "gradient_accumulation": null,
+      "initialization": "pinned_pretrained_base_plus_fresh_lora",
+      "lambda_scale": null,
+      "learning_rate": 0.0002,
+      "likelihood": "complete_answer_grammar_masked_sequence_nll",
+      "lora_alpha": 32,
+      "lora_dropout": 0.05,
+      "lora_rank": 16,
+      "microbatch_size": null,
+      "model_key": "gpt2_xl",
+      "model_revision": "15ea56dee5df4983c59b2538573817e1667135e2",
+      "objective": "uniform",
+      "optimizer_scheduler_clipping": null,
+      "passes": 5,
+      "pipeline_seed": 22,
+      "precision": "bf16",
+      "resume_from_historical_adapter": false,
+      "row_order": "geometry_balanced",
+      "row_order_seed": 438985867459859086,
+      "weight_application_count": 1
+    },
+    "gpt2_xl_weighted_lora": {
+      "adapter_initialization_seed": 6028043142108095537,
+      "adapter_targets": null,
+      "checkpoint_selection": "final",
+      "condition_id": "gpt2_xl_weighted_lora",
+      "configuration_status": "declaration_not_executable_training_config",
+      "corpus_role": "new_shared_co2_fitting_release",
+      "effective_batch_size": 16,
+      "gradient_accumulation": null,
+      "initialization": "pinned_pretrained_base_plus_fresh_lora",
+      "lambda_scale": 0.25,
+      "learning_rate": 0.0002,
+      "likelihood": "complete_answer_grammar_masked_sequence_nll",
+      "lora_alpha": 32,
+      "lora_dropout": 0.05,
+      "lora_rank": 16,
+      "microbatch_size": null,
+      "model_key": "gpt2_xl",
+      "model_revision": "15ea56dee5df4983c59b2538573817e1667135e2",
+      "objective": "weighted",
+      "optimizer_scheduler_clipping": null,
+      "passes": 5,
+      "pipeline_seed": 22,
+      "precision": "bf16",
+      "resume_from_historical_adapter": false,
+      "row_order": "geometry_balanced",
+      "row_order_seed": 438985867459859086,
+      "weight_application_count": 1
+    },
+    "qwen3_4b_weighted_lora": {
+      "adapter_initialization_seed": 8001233608746081293,
+      "adapter_targets": null,
+      "checkpoint_selection": "final",
+      "condition_id": "qwen3_4b_weighted_lora",
+      "configuration_status": "declaration_not_executable_training_config",
+      "corpus_role": "new_shared_co2_fitting_release",
+      "effective_batch_size": 16,
+      "gradient_accumulation": null,
+      "initialization": "pinned_pretrained_base_plus_fresh_lora",
+      "lambda_scale": 0.1,
+      "learning_rate": 0.0002,
+      "likelihood": "complete_answer_grammar_masked_sequence_nll",
+      "lora_alpha": 32,
+      "lora_dropout": 0.05,
+      "lora_rank": 16,
+      "microbatch_size": null,
+      "model_key": "qwen3_4b",
+      "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "objective": "weighted",
+      "optimizer_scheduler_clipping": null,
+      "passes": 5,
+      "pipeline_seed": 22,
+      "precision": "bf16",
+      "resume_from_historical_adapter": false,
+      "row_order": "geometry_balanced",
+      "row_order_seed": 438985867459859086,
+      "weight_application_count": 1
+    }
+  },
+  "diagnostic_rows": 384,
+  "effective_batch_size": 16,
+  "energy_based_selection": false,
+  "example_presentations_per_fit": 30720,
+  "execution_ready": false,
+  "fitting_rows": 6144,
+  "generation_temperature_for_later_execution": 0.7,
+  "gpt_pair": "identical_initial_adapter_row_order_batch_optimizer_exposure_except_objective_and_lambda",
+  "gradient_checkpointing_candidates": [
+    false,
+    true
+  ],
+  "heldout_or_reference_access": false,
+  "logical_window_divisor": "actual_examples_in_effective_window; never_sum_of_weights",
+  "lora": {
+    "alpha": 32,
+    "bias": "none",
+    "dropout": 0.05,
+    "gpt2_target_count": 192,
+    "initialization": "fresh_PEFT_default_zero_B",
+    "qwen3_target_count": 252,
+    "rank": 16,
+    "target_source": "phase6/models.py: native all-block attention and MLP projections",
+    "trainable": "only_lora_A_and_lora_B"
+  },
+  "loss": "complete_answer_grammar_masked_sequence_NLL_including_EOS_without_length_divisor",
+  "maximum_available_memory_fraction": 0.8,
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "error_if_nonfinite": true,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 0.0002,
+    "name": "AdamW",
+    "schedule": "constant",
+    "warmup_steps": 0,
+    "weight_decay": 0.0
+  },
+  "optimizer_fused": false,
+  "optimizer_steps_per_fit": 1920,
+  "passes": 5,
+  "precision": "bf16",
+  "preflight_costs": "recorded_separately_with_disposable_adapters_not_hidden_in_final_fit_exposure",
+  "qwen_enable_thinking": false,
+  "release_manifest": "large_qubit/releases/co2_corpus_v2/manifest.json",
+  "release_sha256": "323fe5fa6d4830339aa9b14dc546364fe5d24765745f08c421e3ca562e2d3e2a",
+  "resume": {
+    "checkpoint_every_steps": 96,
+    "effective_step_boundaries": true,
+    "final_adapter_required": true,
+    "rolling_resume_checkpoints": 2,
+    "states": [
+      "adapter",
+      "optimizer",
+      "python_rng",
+      "numpy_rng",
+      "torch_cpu_rng",
+      "torch_cuda_rng",
+      "row_frontier",
+      "counters"
+    ]
+  },
+  "schema_version": "section7-fixed-fit-policy-v1",
+  "training_control": "researcher_runs_preflight_freeze_and_training",
+  "weighting": "fitting_only_within_geometry_exponential_IQR; n_times_w_once; uniform_multiplier_one"
+}

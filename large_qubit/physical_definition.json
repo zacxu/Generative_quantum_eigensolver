@@ -1,0 +1,767 @@
+{
+  "access_policy": {
+    "all_geometry_metadata_purposes": [
+      "physical_validation"
+    ],
+    "diagnostics_excluded_from": [
+      "fitting",
+      "weighting",
+      "parent_selection",
+      "retrieval"
+    ],
+    "final_test_only_purposes": [
+      "final_test"
+    ],
+    "final_test_scoring": "after_final_experimental_manifest_freeze_only",
+    "metadata_guard_is_execution_authorization": false,
+    "model_inputs_never_contain": [
+      "reference_energies",
+      "target_energy_feedback",
+      "validation_or_final_test_scoring_caches"
+    ],
+    "namespaces": {
+      "cross_method_same_partition_identical_query_reuse": "allowed_with_each_logical_request_charged",
+      "cross_partition_cache_reuse": false,
+      "energy_caches": "large_qubit/scoring_only/gqe-co2-sto3g-30q-v1/caches/<partition>/<geometry_id>",
+      "metadata_or_role_outputs": "large_qubit/gqe-co2-sto3g-30q-v1/<purpose_namespace>/<geometry_id>",
+      "model_inputs": "large_qubit/gqe-co2-sto3g-30q-v1/model_inputs/<partition>/<geometry_id>",
+      "purpose_mapping": {
+        "acquisition": "training_acquisition",
+        "diagnostics": "training_diagnostics",
+        "final_test": "final_test",
+        "parent_selection": "training_fitting",
+        "physical_validation": "physical_metadata",
+        "representation": "training_pilot",
+        "retrieval": "training_fitting",
+        "training": "training_fitting",
+        "validation": "validation",
+        "weighting": "training_fitting"
+      },
+      "references": "large_qubit/scoring_only/gqe-co2-sto3g-30q-v1/references/<partition>/<geometry_id>"
+    },
+    "physical_validation_grants": [
+      "geometry_and_physical_conventions_only"
+    ],
+    "physical_validation_never_grants": [
+      "reference_energy_access",
+      "scoring_cache_access",
+      "model_loading",
+      "model_selection",
+      "training_labels"
+    ],
+    "training_only_purposes": [
+      "training",
+      "diagnostics",
+      "acquisition",
+      "representation",
+      "weighting",
+      "retrieval",
+      "parent_selection"
+    ],
+    "validation_only_purposes": [
+      "validation"
+    ]
+  },
+  "ao_convention": {
+    "atom_order": "O_left,C,O_right",
+    "coefficient_layout": "AO_rows_spatial_MO_columns",
+    "functions": "real_normalized_atom_centered_STO-3G_spherical",
+    "orthonormality": "C.T @ S @ C = identity",
+    "overlap": "real_symmetric_AO_overlap_S",
+    "required_realization_fields": [
+      "provider_version",
+      "basis_definition_sha256",
+      "ao_labels",
+      "ao_overlap_sha256",
+      "mo_coefficients_sha256"
+    ],
+    "within_atom_order": "PySCF AO order; exact indexed labels recorded in every realization"
+  },
+  "benchmark_id": "gqe-co2-sto3g-30q-v1",
+  "definition_id": "co2_physical_definition_v3",
+  "endpoint_policy": {
+    "also_report": [
+      "budget_curves",
+      "improvement_over_HF",
+      "validity",
+      "duplicates",
+      "circuit_resources",
+      "measured_costs"
+    ],
+    "primary": "best_verified_energy_error_at_B_1024_including_initial_HF",
+    "reference_or_cache_use_for_development_selection": false,
+    "target_reporting": "each_of_CO2_I01_CO2_I02_and_their_unweighted_mean"
+  },
+  "execution_ready": false,
+  "final_protocol_frozen": false,
+  "geometries": {
+    "CO2_I01": {
+      "bond_length_angstrom": 1.1,
+      "coordinate_unit": "angstrom",
+      "coordinates_angstrom": [
+        [
+          0.0,
+          0.0,
+          -1.1
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.1
+        ]
+      ],
+      "definition_status": "fixed_grid_requires_passed_physical_realization",
+      "elements": [
+        "O",
+        "C",
+        "O"
+      ],
+      "geometry_id": "CO2_I01",
+      "partition": "final_test"
+    },
+    "CO2_I02": {
+      "bond_length_angstrom": 1.3,
+      "coordinate_unit": "angstrom",
+      "coordinates_angstrom": [
+        [
+          0.0,
+          0.0,
+          -1.3
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.3
+        ]
+      ],
+      "definition_status": "fixed_grid_requires_passed_physical_realization",
+      "elements": [
+        "O",
+        "C",
+        "O"
+      ],
+      "geometry_id": "CO2_I02",
+      "partition": "final_test"
+    },
+    "CO2_T01": {
+      "bond_length_angstrom": 1.0,
+      "coordinate_unit": "angstrom",
+      "coordinates_angstrom": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "definition_status": "fixed_grid_requires_passed_physical_realization",
+      "elements": [
+        "O",
+        "C",
+        "O"
+      ],
+      "geometry_id": "CO2_T01",
+      "partition": "training"
+    },
+    "CO2_T02": {
+      "bond_length_angstrom": 1.2,
+      "coordinate_unit": "angstrom",
+      "coordinates_angstrom": [
+        [
+          0.0,
+          0.0,
+          -1.2
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.2
+        ]
+      ],
+      "definition_status": "fixed_grid_requires_passed_physical_realization",
+      "elements": [
+        "O",
+        "C",
+        "O"
+      ],
+      "geometry_id": "CO2_T02",
+      "partition": "training"
+    },
+    "CO2_T03": {
+      "bond_length_angstrom": 1.32,
+      "coordinate_unit": "angstrom",
+      "coordinates_angstrom": [
+        [
+          0.0,
+          0.0,
+          -1.32
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.32
+        ]
+      ],
+      "definition_status": "fixed_grid_requires_passed_physical_realization",
+      "elements": [
+        "O",
+        "C",
+        "O"
+      ],
+      "geometry_id": "CO2_T03",
+      "partition": "training"
+    },
+    "CO2_V01": {
+      "bond_length_angstrom": 1.25,
+      "coordinate_unit": "angstrom",
+      "coordinates_angstrom": [
+        [
+          0.0,
+          0.0,
+          -1.25
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.25
+        ]
+      ],
+      "definition_status": "fixed_grid_requires_passed_physical_realization",
+      "elements": [
+        "O",
+        "C",
+        "O"
+      ],
+      "geometry_id": "CO2_V01",
+      "partition": "validation"
+    }
+  },
+  "grid_amendment": {
+    "SCF_or_stability_thresholds_changed": false,
+    "amendment_id": "training_T03_stable_RHF_v3",
+    "current_definition_id": "co2_physical_definition_v3",
+    "evidence_path": "large_qubit/amendments/section3_grid_v3.json",
+    "final_targets_changed": false,
+    "geometry_id": "CO2_T03",
+    "new_bond_length_angstrom": 1.32,
+    "old_bond_length_angstrom": 1.35,
+    "preserved_failed_attempt": "large_qubit/physics/section3_v2",
+    "preserved_specification": "large_qubit/archives/section3_physical_v2/snapshot.json",
+    "previous_definition_id": "co2_physical_definition_v2",
+    "prior_amendment_path": "large_qubit/amendments/section3_grid_v2.json",
+    "reason": "registered_RHF_to_UHF_stability_check_failed_before_production",
+    "reference_or_candidate_energies_used_for_decision": false,
+    "replacement_requires_all_registered_physical_checks": true
+  },
+  "grid_amendment_policy": {
+    "final_performance_based_amendment": false,
+    "overwrite_registration_or_suppress_negative_outcomes": false,
+    "permitted_reason": "numerical_or_physical_validation_failure_before_production",
+    "required_record": [
+      "new_version",
+      "old_grid",
+      "new_grid",
+      "reason",
+      "evidence",
+      "affected_bindings",
+      "incurred_costs"
+    ],
+    "status": "fixed_definition_physical_realization_required_before_production"
+  },
+  "mo_convention": {
+    "AO_projection_threshold": 1e-10,
+    "S_orthonormality_maximum_absolute_error": 1e-08,
+    "alignment_anchor": "CO2_T02",
+    "anchor_degenerate_basis": "ordered_AO_projection_pivots_S_metric_Gram_Schmidt",
+    "anchor_order": "energy_ascending_separately_occupied_and_virtual",
+    "anchor_phase": "largest_absolute_AO_coefficient_positive_ties_lowest_AO_index",
+    "assignment_tie_break": "lexicographic_among_equal_optimal_assignments",
+    "assignment_tie_tolerance": 1e-12,
+    "coefficient_tie_tolerance": 1e-12,
+    "cross_overlap": "C_anchor.T @ S_cross @ C_target",
+    "degeneracy_grouping": "total_block_span_within_tolerance_no_transitive_chaining",
+    "energy_degeneracy_tolerance_hartree": 1e-07,
+    "held_out_reference_energy_feedback": false,
+    "integrals": "transform_all_one_and_two_electron_integrals_with_final_aligned_C",
+    "minimum_alignment_singular_value": 1e-06,
+    "numerical_alignment_validation": "required_section_3_realization_bound_separately",
+    "occupied_virtual_mixing": false,
+    "orbitals": "real_spatial_RHF; occupied_0_to_10_then_virtual_11_to_14",
+    "pivot_tie_break": "lowest_AO_index",
+    "target_assignment": "maximum_absolute_cross_AO_overlap_separately_occupied_and_virtual",
+    "target_degenerate_alignment": "orthogonal_Procrustes_only_within_target_energy_degenerate_blocks",
+    "target_phase": "positive_matched_anchor_overlap",
+    "two_electron_integral_layout": "full_four_index_chemists_notation_(pq|rs)"
+  },
+  "occupation_convention": {
+    "alpha_beta_conversion": "explicit_determinant_permutation_and_fermionic_reordering_sign",
+    "basis_index": "sum(occupation[w] << (29-w) for w in range(30))",
+    "determinant_ordering_validation": "pending_section_4",
+    "endianness": "wire_0_most_significant_bit",
+    "fixed_sector_dimension": 1863225,
+    "hf_occupations": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "hf_spatial_occupations": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "qubit_wires": "wire_index_equals_spin_orbital_index",
+    "reshape_interleaved_state_into_alpha_beta_array": false,
+    "spatial_MO_indexing": "zero_based",
+    "spin_orbitals": "alpha_even_beta_odd; alpha(p)=2*p; beta(p)=2*p+1"
+  },
+  "partitions": {
+    "final_test": [
+      "CO2_I01",
+      "CO2_I02"
+    ],
+    "training": [
+      "CO2_T01",
+      "CO2_T02",
+      "CO2_T03"
+    ],
+    "validation": [
+      "CO2_V01"
+    ]
+  },
+  "pending_numerical_bindings": [
+    "determinant_ordering_and_signs",
+    "iterative_references_and_residuals",
+    "evaluator_correctness",
+    "measured_runtime_memory_and_VQE_feasibility"
+  ],
+  "physical_realization_binding_policy": {
+    "artifact_binding": "separate_section_3_registration_and_validation_evidence",
+    "numeric_results_in_this_definition": false,
+    "production_gate": "all_required_realization_checks_pass_and_match_registered_artifacts",
+    "required_checks": [
+      "all_geometry_SCF_solutions_and_stability",
+      "AO_MO_alignment",
+      "basis_and_population_counts",
+      "aligned_one_and_two_electron_integrals"
+    ],
+    "section": 3
+  },
+  "problem": {
+    "atom_order": [
+      "O_left",
+      "C",
+      "O_right"
+    ],
+    "atomic_numbers": [
+      8,
+      6,
+      8
+    ],
+    "basis": "sto-3g",
+    "cartesian": false,
+    "charge": 0,
+    "coordinate_unit": "angstrom",
+    "electrons": 22,
+    "frozen_core_orbitals": 0,
+    "full_basis": true,
+    "geometry": "linear_symmetric",
+    "mapping": "jordan_wigner",
+    "molecular_axis": "laboratory_z",
+    "molecule": "CO2",
+    "n_alpha": 11,
+    "n_beta": 11,
+    "origin": "carbon_nucleus",
+    "qubits": 30,
+    "spatial_orbitals": 15,
+    "spin_orbitals": 30,
+    "tapered_qubits": 0
+  },
+  "reference_policy": {
+    "endpoint": "lowest_energy_in_fixed_Nalpha_11_Nbeta_11_sector",
+    "hamiltonian": "same_full_basis_aligned_integral_Hamiltonian_as_candidates",
+    "interpretation": "finite_basis_fixed_population_reference_not_experimental_ground_energy",
+    "reported_energy": "electronic_expectation_plus_nuclear_repulsion_in_hartree",
+    "solver_and_residual_validation": "pending_section_4",
+    "total_spin_purity_asserted_from_fixed_spin_projection": false,
+    "values_present": false
+  },
+  "scf_policy": {
+    "actual_solutions_and_stability_results": "required_section_3_realization_bound_separately",
+    "choose_solution": "single_deterministic_minao_RHF_per_geometry_stop_if_unstable_no_reference_label_selection",
+    "convergence_energy_hartree": 1e-12,
+    "convergence_gradient": 1e-09,
+    "initial_guess": "minao",
+    "maximum_cycles": 200,
+    "post_SCF_gradient_norm_maximum": 1e-08,
+    "reference_determinant": "restricted_closed_shell_Hartree_Fock",
+    "required_checks": [
+      "SCF_converged",
+      "internal_and_external_stability",
+      "electron_population",
+      "AO_MO_orthonormality",
+      "record_chosen_solution_and_all_retries"
+    ],
+    "stability_Hessian_dimension_per_channel": 44,
+    "stability_channels": [
+      "internal_RHF",
+      "external_RHF_to_UHF",
+      "external_real_to_complex"
+    ],
+    "stability_minimum_eigenvalue_tolerance": -1e-07,
+    "unresolved_or_unstable_solution": "stop_and_record_before_production"
+  },
+  "schema_version": "large-qubit-physical-definition-v1",
+  "scientific_results_present": false,
+  "section": 3,
+  "seeds": {
+    "acquisition": {
+      "CO2_T01": {
+        "group": "CO2_T01",
+        "seed": 4434437711620817717
+      },
+      "CO2_T02": {
+        "group": "CO2_T02",
+        "seed": 2221599625396411518
+      },
+      "CO2_T03": {
+        "group": "CO2_T03",
+        "seed": 2411912013505726575
+      }
+    },
+    "adapter_initialization": {
+      "gpt2_xl_uniform_lora": {
+        "group": "gpt2_pair",
+        "seed": 6028043142108095537
+      },
+      "gpt2_xl_weighted_lora": {
+        "group": "gpt2_pair",
+        "seed": 6028043142108095537
+      },
+      "qwen3_4b_weighted_lora": {
+        "group": "qwen3_weighted",
+        "seed": 8001233608746081293
+      }
+    },
+    "benchmark_id": "gqe-co2-sto3g-30q-v1",
+    "derivation": {
+      "bytes": "first 8, big-endian",
+      "digest": "sha256",
+      "encoding": "UTF-8; sorted keys; compact separators; ensure_ascii=true; no newline",
+      "implementation": "large_qubit.protocol.seed_for",
+      "input": "canonical JSON array [benchmark_id,22,stream,group]",
+      "mask": "(1 << 63) - 1"
+    },
+    "generation": {
+      "gpt2_xl_frozen": {
+        "CO2_I01": {
+          "group": "gpt2_xl_frozen:CO2_I01",
+          "seed": 2581265713259939851
+        },
+        "CO2_I02": {
+          "group": "gpt2_xl_frozen:CO2_I02",
+          "seed": 7940460348123521803
+        },
+        "CO2_T01": {
+          "group": "gpt2_xl_frozen:CO2_T01",
+          "seed": 26148525167662826
+        },
+        "CO2_T02": {
+          "group": "gpt2_xl_frozen:CO2_T02",
+          "seed": 1476846007638580686
+        },
+        "CO2_T03": {
+          "group": "gpt2_xl_frozen:CO2_T03",
+          "seed": 977919101973975134
+        },
+        "CO2_V01": {
+          "group": "gpt2_xl_frozen:CO2_V01",
+          "seed": 5774511902175160413
+        }
+      },
+      "gpt2_xl_uniform_lora": {
+        "CO2_I01": {
+          "group": "gpt2_xl_uniform_lora:CO2_I01",
+          "seed": 1573167982056736711
+        },
+        "CO2_I02": {
+          "group": "gpt2_xl_uniform_lora:CO2_I02",
+          "seed": 3270934111626634388
+        },
+        "CO2_T01": {
+          "group": "gpt2_xl_uniform_lora:CO2_T01",
+          "seed": 4834004790913876589
+        },
+        "CO2_T02": {
+          "group": "gpt2_xl_uniform_lora:CO2_T02",
+          "seed": 369157968493101804
+        },
+        "CO2_T03": {
+          "group": "gpt2_xl_uniform_lora:CO2_T03",
+          "seed": 8451098938471373969
+        },
+        "CO2_V01": {
+          "group": "gpt2_xl_uniform_lora:CO2_V01",
+          "seed": 4558965554928248090
+        }
+      },
+      "gpt2_xl_weighted_lora": {
+        "CO2_I01": {
+          "group": "gpt2_xl_weighted_lora:CO2_I01",
+          "seed": 2036733752988776246
+        },
+        "CO2_I02": {
+          "group": "gpt2_xl_weighted_lora:CO2_I02",
+          "seed": 1601075921784954450
+        },
+        "CO2_T01": {
+          "group": "gpt2_xl_weighted_lora:CO2_T01",
+          "seed": 3442486806685031672
+        },
+        "CO2_T02": {
+          "group": "gpt2_xl_weighted_lora:CO2_T02",
+          "seed": 4426811004873020372
+        },
+        "CO2_T03": {
+          "group": "gpt2_xl_weighted_lora:CO2_T03",
+          "seed": 5655352814690356809
+        },
+        "CO2_V01": {
+          "group": "gpt2_xl_weighted_lora:CO2_V01",
+          "seed": 5770088132939573256
+        }
+      },
+      "qwen3_4b_frozen": {
+        "CO2_I01": {
+          "group": "qwen3_4b_frozen:CO2_I01",
+          "seed": 5730866815621071582
+        },
+        "CO2_I02": {
+          "group": "qwen3_4b_frozen:CO2_I02",
+          "seed": 9169754602547041952
+        },
+        "CO2_T01": {
+          "group": "qwen3_4b_frozen:CO2_T01",
+          "seed": 5412321413291273112
+        },
+        "CO2_T02": {
+          "group": "qwen3_4b_frozen:CO2_T02",
+          "seed": 2255425775249515907
+        },
+        "CO2_T03": {
+          "group": "qwen3_4b_frozen:CO2_T03",
+          "seed": 5798249063826276845
+        },
+        "CO2_V01": {
+          "group": "qwen3_4b_frozen:CO2_V01",
+          "seed": 1632234654936783665
+        }
+      },
+      "qwen3_4b_weighted_lora": {
+        "CO2_I01": {
+          "group": "qwen3_4b_weighted_lora:CO2_I01",
+          "seed": 7965260877028044517
+        },
+        "CO2_I02": {
+          "group": "qwen3_4b_weighted_lora:CO2_I02",
+          "seed": 755769866543097485
+        },
+        "CO2_T01": {
+          "group": "qwen3_4b_weighted_lora:CO2_T01",
+          "seed": 5782169538310933369
+        },
+        "CO2_T02": {
+          "group": "qwen3_4b_weighted_lora:CO2_T02",
+          "seed": 8304406050696375311
+        },
+        "CO2_T03": {
+          "group": "qwen3_4b_weighted_lora:CO2_T03",
+          "seed": 820456173680228126
+        },
+        "CO2_V01": {
+          "group": "qwen3_4b_weighted_lora:CO2_V01",
+          "seed": 4640254858724659537
+        }
+      },
+      "uniform_random": {
+        "CO2_I01": {
+          "group": "uniform_random:CO2_I01",
+          "seed": 7665704869340234318
+        },
+        "CO2_I02": {
+          "group": "uniform_random:CO2_I02",
+          "seed": 8939346228370559587
+        },
+        "CO2_T01": {
+          "group": "uniform_random:CO2_T01",
+          "seed": 2129345412588214596
+        },
+        "CO2_T02": {
+          "group": "uniform_random:CO2_T02",
+          "seed": 1771990499442167843
+        },
+        "CO2_T03": {
+          "group": "uniform_random:CO2_T03",
+          "seed": 2193613468129387955
+        },
+        "CO2_V01": {
+          "group": "uniform_random:CO2_V01",
+          "seed": 6701885526780366814
+        }
+      }
+    },
+    "generation_batch_and_rng_checkpoint_policy": "pending_executor_freeze_before_generation",
+    "gpt_pair": {
+      "allowed_differences": [
+        "condition_id",
+        "objective",
+        "lambda_scale"
+      ],
+      "conditions": [
+        "gpt2_xl_weighted_lora",
+        "gpt2_xl_uniform_lora"
+      ],
+      "initialization_group": "gpt2_pair",
+      "resolved_microbatch_optimizer_and_adapter_targets": "pending_before_fitting",
+      "shared_numerical_declaration": {
+        "adapter_initialization_seed": 6028043142108095537,
+        "adapter_targets": null,
+        "checkpoint_selection": "final",
+        "configuration_status": "declaration_not_executable_training_config",
+        "corpus_role": "new_shared_co2_fitting_release",
+        "effective_batch_size": 16,
+        "gradient_accumulation": null,
+        "initialization": "pinned_pretrained_base_plus_fresh_lora",
+        "learning_rate": 0.0002,
+        "likelihood": "complete_answer_grammar_masked_sequence_nll",
+        "lora_alpha": 32,
+        "lora_dropout": 0.05,
+        "lora_rank": 16,
+        "microbatch_size": null,
+        "model_key": "gpt2_xl",
+        "model_revision": "15ea56dee5df4983c59b2538573817e1667135e2",
+        "optimizer_scheduler_clipping": null,
+        "passes": 5,
+        "pipeline_seed": 22,
+        "precision": "bf16",
+        "resume_from_historical_adapter": false,
+        "row_order": "geometry_balanced",
+        "row_order_seed": 438985867459859086,
+        "weight_application_count": 1
+      },
+      "shared_numerical_declaration_sha256": "348020d963a482fe91166d1a159bf2b2fc44646283b3afed31a456dca0ff023f"
+    },
+    "pipeline_seed": 22,
+    "row_order": {
+      "group": "shared",
+      "rule": "geometry_balanced_same_rows_same_order_for_all_fits",
+      "seed": 438985867459859086
+    },
+    "shared_streams": {
+      "acquisition": 5879654575383932378,
+      "adapter_initialization": 3856799117964848314,
+      "generation": 4182658115231766691,
+      "row_order": 438985867459859086,
+      "vqe": 4194278196284496897
+    },
+    "vqe": {
+      "CO2_I01": {
+        "group": "CO2_I01",
+        "seed": 6925831592514390930
+      },
+      "CO2_I02": {
+        "group": "CO2_I02",
+        "seed": 3024946671463999510
+      },
+      "CO2_T01": {
+        "group": "CO2_T01",
+        "seed": 1471528279639698276
+      },
+      "CO2_T02": {
+        "group": "CO2_T02",
+        "seed": 6967928005789220539
+      },
+      "CO2_T03": {
+        "group": "CO2_T03",
+        "seed": 512632559483874966
+      },
+      "CO2_V01": {
+        "group": "CO2_V01",
+        "seed": 3217947772626626921
+      }
+    }
+  },
+  "status": "frozen_physical_specification_realization_recorded_separately"
+}

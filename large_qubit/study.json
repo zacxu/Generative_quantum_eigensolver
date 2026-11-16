@@ -1,0 +1,415 @@
+{
+  "benchmark_id": "gqe-co2-sto3g-30q-v1",
+  "budget": {
+    "cache_hits_charged": true,
+    "duplicates_charged": true,
+    "hf_included": true,
+    "main_logical_requests": 16384,
+    "main_trajectories": 16,
+    "post_hf_requests_per_main_trajectory": 1023,
+    "requests_per_main_trajectory": 1024
+  },
+  "claim_limits": [
+    "one_seed_descriptive_case_study",
+    "no_seed_robustness_inference",
+    "no_quantum_advantage_claim",
+    "no_classical_hardness_claim",
+    "no_gqe_superiority_from_width",
+    "no_claim_five_passes_converged",
+    "no_qwen_weighting_specific_conclusion",
+    "no_online_energy_feedback_training"
+  ],
+  "deferred": [
+    "qwen_uniform",
+    "smollm3",
+    "phi4",
+    "scratch",
+    "additional_seeds",
+    "extrapolation",
+    "large_tuning_sweeps",
+    "publication_extension"
+  ],
+  "execution_ready": false,
+  "final_protocol_frozen": false,
+  "generation": {
+    "catalogue_path": "large_qubit/catalogues/co2_screened_v1.json",
+    "catalogue_sha256": "0a5fc7b1e21497e9fc4283a2e40829de8789f1e9f17e5f3726b878a549c4121c",
+    "constrained_complete_answer": true,
+    "context_and_catalogue_preflight_pending": false,
+    "context_tokens": 1024,
+    "max_attempts_per_main_trajectory": 2048,
+    "qwen_enable_thinking": false,
+    "selected_circuit_length": 32,
+    "target_energy_feedback": false,
+    "temperature": 0.7
+  },
+  "model_revisions": {
+    "gpt2_xl": "15ea56dee5df4983c59b2538573817e1667135e2",
+    "qwen3_4b": "1cfa9a7208912126459214e8b04321603b3df60c"
+  },
+  "optional_40_qubit_gate": "required_results_and_submission_artifacts_complete_with_measured_headroom",
+  "pending_bindings": {
+    "compact_validation_panel": null,
+    "final_experiment_freeze": null,
+    "remaining_partition_references": null,
+    "reproducible_dependency_environment": null,
+    "resolved_optimizer_and_numerical_settings": null,
+    "resumable_tmux_executor_and_analysis": null,
+    "three_fresh_final_adapters": null
+  },
+  "physical_definition": {
+    "definition_sha256": "8f7b5da32f281e6bde4ffb649e73a4bbf69cb536a76b1a1398f1ec902788f455",
+    "final_experiment_freeze": false,
+    "path": "large_qubit/physical_definition.json",
+    "realization_manifest": "large_qubit/physics/section3_v3/manifest.json"
+  },
+  "pipeline_seeds": [
+    22
+  ],
+  "problem": {
+    "basis": "sto-3g",
+    "charge": 0,
+    "electrons": 22,
+    "frozen_core_orbitals": 0,
+    "geometry": "linear_symmetric",
+    "mapping": "jordan_wigner",
+    "molecule": "CO2",
+    "n_alpha": 11,
+    "n_beta": 11,
+    "qubits": 30,
+    "spatial_orbitals": 15,
+    "tapered_qubits": 0
+  },
+  "required_methods": [
+    "gpt2_xl_frozen",
+    "gpt2_xl_weighted_lora",
+    "gpt2_xl_uniform_lora",
+    "qwen3_4b_frozen",
+    "qwen3_4b_weighted_lora",
+    "uniform_random",
+    "training_circuit_retrieval",
+    "conventional_vqe"
+  ],
+  "research_questions": {
+    "RQ1": {
+      "claim": "descriptive_frozen_vs_weighted_per_backbone",
+      "pairs": [
+        [
+          "gpt2_xl_frozen",
+          "gpt2_xl_weighted_lora"
+        ],
+        [
+          "qwen3_4b_frozen",
+          "qwen3_4b_weighted_lora"
+        ]
+      ]
+    },
+    "RQ2": {
+      "amortized_transfer_advantage_claim": false,
+      "baselines": [
+        "uniform_random",
+        "training_circuit_retrieval",
+        "conventional_vqe"
+      ],
+      "learned": [
+        "gpt2_xl_weighted_lora",
+        "gpt2_xl_uniform_lora",
+        "qwen3_4b_weighted_lora"
+      ],
+      "matched_family_optimizer_claim": false,
+      "outcomes": [
+        "verified_energy_error",
+        "logical_requests",
+        "marginal_and_total_cost"
+      ]
+    },
+    "RQ3": {
+      "claim": "two_fixed_unseen_interpolation_geometries",
+      "targets": [
+        "CO2_I01",
+        "CO2_I02"
+      ]
+    },
+    "RQ4": {
+      "claim": "gpt2_weighting_only",
+      "pair": [
+        "gpt2_xl_weighted_lora",
+        "gpt2_xl_uniform_lora"
+      ],
+      "qwen_weighting_specific_claim": false
+    }
+  },
+  "reuse_policy": {
+    "base_models": "authenticate_existing_pinned_weights_and_tokenizers_locally",
+    "historical_cost_namespace": "historical_lih",
+    "historical_lih": "separately_labelled_pilot_and_development_evidence",
+    "new_code_and_outputs": "large_qubit/",
+    "new_cost_namespace": "gqe-co2-sto3g-30q-v1",
+    "new_labels_and_adapters_required": true,
+    "old_adapter_initialization": "deferred_separate_controlled_condition",
+    "old_phase7_commands": "historical_lih_only"
+  },
+  "schema_version": "large-qubit-decisions-v2",
+  "section4_validation": {
+    "correctness_passed": true,
+    "feasibility_gate": "go_local_cpu_under_declared_window",
+    "full_pipeline_ready": false,
+    "heldout_references_computed": false,
+    "manifest": "large_qubit/validation/section4_v1/manifest.json",
+    "manifest_sha256": "232fbe1c86075244a17b8a194d6ae7e35d84ab8126e69ad528436c2c8ed977e0",
+    "reference_converged": true,
+    "reference_geometry": "CO2_T02",
+    "section_4_complete": true
+  },
+  "section5_validation": {
+    "catalogue": {
+      "catalogue_sha256": "0a5fc7b1e21497e9fc4283a2e40829de8789f1e9f17e5f3726b878a549c4121c",
+      "discrete_ids_including_identity": 513,
+      "file_sha256": "fbeba16b348f4d150448548fc00fa12e68f09024e8f1055c3353abce39132221",
+      "path": "large_qubit/catalogues/co2_screened_v1.json",
+      "templates": 64
+    },
+    "compact_vqe": {
+      "convergence_claimed": false,
+      "duplicate_and_probe_queries_charged": true,
+      "family": "screened_compact_fermionic_excitation",
+      "initialization_binding": "preparation_private_screening_record",
+      "initializations": [
+        "HF_zero",
+        "fixed_training_mean_perturbative_vector"
+      ],
+      "layout": "catalogue_vqe_template_indices_in_order",
+      "main_actual_post_HF_requests": 1022,
+      "main_post_HF_request_caps_per_restart": [
+        511,
+        512
+      ],
+      "main_unused_tail_requests": 1,
+      "optimizer": "five_point_excitation_coordinate_minimization",
+      "parameters": 24,
+      "pilot_requests_per_restart": [
+        145,
+        145
+      ]
+    },
+    "correctness_passed": true,
+    "feasibility_gate": "go",
+    "full_pipeline_ready": false,
+    "heldout_energy_or_reference_access": false,
+    "manifest": "large_qubit/validation/section5_v1/manifest.json",
+    "manifest_sha256": "26d65cc10eb622d28585cb6503e23033004c10acd6496513b82b0d46ecec3155",
+    "ordinary_requests": 909,
+    "pilot_total_including_section4": 945,
+    "policy": {
+      "file_sha256": "e481d50b33cd0e3ed8f4519c6985a81212bf4b0b0d12ec90fa52401f8a086c79",
+      "path": "large_qubit/section5_policy.json",
+      "policy_sha256": "c84d10ae1975ca0dc91715d4e29e96b0d06425407d621a2f4d568c33da5e0cc2"
+    },
+    "preparation": {
+      "complete_answer_context_certificates": 24,
+      "file_sha256": "52e1bd4fc0fb33c42a8743266910ef868e1e60ee6ba0ad7d223c43e72a0a0908",
+      "path": "large_qubit/evidence/sections_1_5_v1/preparation.json"
+    },
+    "remaining_pilot_allowance": 79,
+    "section_5_complete": true,
+    "selected_length": 32,
+    "separate_integrity_hamiltonian_actions": 9
+  },
+  "section6_failed_attempt_v1": {
+    "abandoned_requests": 0,
+    "charged_nonretained_fitting_requests": 7,
+    "diagnostic_energies_used_for_quality": false,
+    "evidence_authenticated": true,
+    "failed_quality_check": {
+      "ess_fraction": 0.045462919181968986,
+      "geometry_id": "CO2_T03",
+      "lambda_scale": 0.1,
+      "maximum_allowed_row_weight": 0.05,
+      "maximum_row_weight": 0.05793925698270687,
+      "minimum_ess_fraction": 0.05
+    },
+    "failed_requests": 0,
+    "fallback_permitted": false,
+    "feasibility_gate": "no_go",
+    "full_pipeline_ready": false,
+    "heldout_energy_or_reference_access": false,
+    "historical_snapshot": true,
+    "manifest": "large_qubit/validation/section6_v1/manifest.json",
+    "manifest_sha256": "cdf23f3493d1c583cbf4e46126412416ea0afe295247f699f1a4305845693737",
+    "model_training_executed": false,
+    "next_action": "review_explicit_prospective_acquisition_amendment_before_release_or_fitting",
+    "ordinary_requests": 6538,
+    "policy": {
+      "file_sha256": "486cbb228c40db3a68f7bb07f0edfd5146816b0cada305af8fde606e8407c008",
+      "path": "large_qubit/section6_policy.json",
+      "policy_sha256": "d1573c90682486ec7c28a32b597c4587d9cdff2e35923bf6b3de5f278fd130d0"
+    },
+    "preparation": {
+      "file_sha256": "e70140bc847dca2d8e5fb138188fd93f1e0ae61a9709e6d51a5cd2c1ec0ccbea",
+      "path": "large_qubit/evidence/sections_1_6_v1/preparation.json"
+    },
+    "production_request_ceiling": 8192,
+    "release": null,
+    "released_rows_per_geometry": null,
+    "remaining_production_allowance": 1654,
+    "retained_diagnostics_per_geometry": 128,
+    "retained_fitting_rows_per_geometry": 2048,
+    "section_6_complete": false,
+    "separate_integrity_hamiltonian_actions": 0,
+    "stop_reason": "target",
+    "superseded_by": "section6_validation"
+  },
+  "section6_validation": {
+    "abandoned_requests": 0,
+    "amended_confirmation": true,
+    "amendment": {
+      "file_sha256": "611592dad5d900a536939ce4435f5a1982174d2e1a94df1f947c6a95357cc130",
+      "path": "large_qubit/amendments/section6_acquisition_v2.json"
+    },
+    "cumulative_ordinary_requests": 13090,
+    "diagnostic_energies_used_for_quality": false,
+    "each_corpus_consumer_charged_full_prior_plus_fresh_and_verification_cost": true,
+    "evidence_authenticated": true,
+    "failed_requests": 0,
+    "feasibility_gate": "go",
+    "fixed_lambdas_and_quality_thresholds_unchanged": true,
+    "fresh_ordinary_requests": 6552,
+    "fresh_request_ceiling": 8192,
+    "full_pipeline_ready": false,
+    "heldout_energy_or_reference_access": false,
+    "manifest": "large_qubit/validation/section6_v2/manifest.json",
+    "manifest_sha256": "4724732634b8740560de28bf126834a939a1ac13af44448a23e435d0a0cd4fbb",
+    "maximum_cumulative_ordinary_requests": 14730,
+    "model_training_executed": false,
+    "policy": {
+      "file_sha256": "c7b7110d52688e0ae60c4738fd15cc247552d8cc448f1f09935c4b88b36cce52",
+      "path": "large_qubit/section6_v2_policy.json",
+      "policy_sha256": "b8a3766565d649431aec5aff5604bb2eedbf54ee1d69c78142185b35ffb25441"
+    },
+    "preparation": {
+      "file_sha256": "12cf3780db66b74aeae55701f3a56ec40e696ddce50d51212e740004baeb15e2",
+      "path": "large_qubit/evidence/sections_1_6_v2/preparation.json"
+    },
+    "prior_failed_ordinary_requests": 6538,
+    "release": {
+      "diagnostics_per_geometry": 128,
+      "fitting_rows_per_geometry": 2048,
+      "identical_fitting_rows_for_all_three_fits": true,
+      "manifest_sha256": "323fe5fa6d4830339aa9b14dc546364fe5d24765745f08c421e3ca562e2d3e2a",
+      "path": "large_qubit/releases/co2_corpus_v2/manifest.json",
+      "prior_attempt_labels_imported": false,
+      "retrieval_uses_fitting_rows_only": true
+    },
+    "remaining_confirmation_allowance": 1640,
+    "section_6_complete": true,
+    "separate_integrity_hamiltonian_actions": 12,
+    "stop_reason": "target"
+  },
+  "section7_implementation": {
+    "final_adapters_produced": false,
+    "gpu_allocation": "three_H200_one_per_fit",
+    "gpu_batch_configuration": "measured_and_frozen_by_researcher_before_fitting",
+    "model_training_executed_during_implementation": false,
+    "policy": "large_qubit/section7_policy.json",
+    "preparation": "large_qubit/evidence/sections_1_7_v1/preparation.json",
+    "scientific_training_complete": false,
+    "status": "implemented_prepared_workflow_researcher_training_pending",
+    "token_cache": "large_qubit/training_data/section7_v1",
+    "training_conditions_declaration_preserved_for_physical_lineage": true
+  },
+  "status": "sections_1_6_complete_section7_implemented_training_pending",
+  "target_definition_status": "fixed_section3_grid_realization_authenticated_separately",
+  "targets": [
+    "CO2_I01",
+    "CO2_I02"
+  ],
+  "training_conditions": {
+    "gpt2_xl_uniform_lora": {
+      "adapter_initialization_seed": 6028043142108095537,
+      "adapter_targets": null,
+      "checkpoint_selection": "final",
+      "condition_id": "gpt2_xl_uniform_lora",
+      "configuration_status": "declaration_not_executable_training_config",
+      "corpus_role": "new_shared_co2_fitting_release",
+      "effective_batch_size": 16,
+      "gradient_accumulation": null,
+      "initialization": "pinned_pretrained_base_plus_fresh_lora",
+      "lambda_scale": null,
+      "learning_rate": 0.0002,
+      "likelihood": "complete_answer_grammar_masked_sequence_nll",
+      "lora_alpha": 32,
+      "lora_dropout": 0.05,
+      "lora_rank": 16,
+      "microbatch_size": null,
+      "model_key": "gpt2_xl",
+      "model_revision": "15ea56dee5df4983c59b2538573817e1667135e2",
+      "objective": "uniform",
+      "optimizer_scheduler_clipping": null,
+      "passes": 5,
+      "pipeline_seed": 22,
+      "precision": "bf16",
+      "resume_from_historical_adapter": false,
+      "row_order": "geometry_balanced",
+      "row_order_seed": 438985867459859086,
+      "weight_application_count": 1
+    },
+    "gpt2_xl_weighted_lora": {
+      "adapter_initialization_seed": 6028043142108095537,
+      "adapter_targets": null,
+      "checkpoint_selection": "final",
+      "condition_id": "gpt2_xl_weighted_lora",
+      "configuration_status": "declaration_not_executable_training_config",
+      "corpus_role": "new_shared_co2_fitting_release",
+      "effective_batch_size": 16,
+      "gradient_accumulation": null,
+      "initialization": "pinned_pretrained_base_plus_fresh_lora",
+      "lambda_scale": 0.25,
+      "learning_rate": 0.0002,
+      "likelihood": "complete_answer_grammar_masked_sequence_nll",
+      "lora_alpha": 32,
+      "lora_dropout": 0.05,
+      "lora_rank": 16,
+      "microbatch_size": null,
+      "model_key": "gpt2_xl",
+      "model_revision": "15ea56dee5df4983c59b2538573817e1667135e2",
+      "objective": "weighted",
+      "optimizer_scheduler_clipping": null,
+      "passes": 5,
+      "pipeline_seed": 22,
+      "precision": "bf16",
+      "resume_from_historical_adapter": false,
+      "row_order": "geometry_balanced",
+      "row_order_seed": 438985867459859086,
+      "weight_application_count": 1
+    },
+    "qwen3_4b_weighted_lora": {
+      "adapter_initialization_seed": 8001233608746081293,
+      "adapter_targets": null,
+      "checkpoint_selection": "final",
+      "condition_id": "qwen3_4b_weighted_lora",
+      "configuration_status": "declaration_not_executable_training_config",
+      "corpus_role": "new_shared_co2_fitting_release",
+      "effective_batch_size": 16,
+      "gradient_accumulation": null,
+      "initialization": "pinned_pretrained_base_plus_fresh_lora",
+      "lambda_scale": 0.1,
+      "learning_rate": 0.0002,
+      "likelihood": "complete_answer_grammar_masked_sequence_nll",
+      "lora_alpha": 32,
+      "lora_dropout": 0.05,
+      "lora_rank": 16,
+      "microbatch_size": null,
+      "model_key": "qwen3_4b",
+      "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "objective": "weighted",
+      "optimizer_scheduler_clipping": null,
+      "passes": 5,
+      "pipeline_seed": 22,
+      "precision": "bf16",
+      "resume_from_historical_adapter": false,
+      "row_order": "geometry_balanced",
+      "row_order_seed": 438985867459859086,
+      "weight_application_count": 1
+    }
+  }
+}
