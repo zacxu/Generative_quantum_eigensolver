@@ -4,6 +4,21 @@ Source code and upload index for the completed **30-qubit CO2/STO-3G study**: of
 
 The experiment used one pipeline seed, an accepted corpus of **6,144 fitting circuits plus 384 separate diagnostics**, three adapter fits, and eight methods on two held-out bond lengths. All **16 main evaluation trajectories** completed. This is a molecular case study; the results do not establish quantum advantage or generalisation across molecules.
 
+## What a fresh download can run
+
+**GitHub plus the complete pinned Hugging Face dataset reproduces the saved numerical results.** GitHub alone contains the source and isolated tests. The original production commands require additional authenticated inputs from the preserved research workspace.
+
+| Operation | Fresh-download status | Required files |
+| --- | --- | --- |
+| Source smoke tests | Verified: 19 passed | GitHub only; Python standard library |
+| Saved result and resource reanalysis | Verified: all 16 trajectories match exactly | Complete Hugging Face dataset snapshot |
+| Ledger chains and proposal distributions | Verified: all 16 distributions match exactly | Same dataset plus NumPy |
+| Read the finished research reports | Available | Two PDFs in the dataset's `reports/` directory |
+| Rebuild the original PDFs | Requires additional inputs | Original manuscript parts and historical figure/evidence inputs |
+| Rerun original training, validation or main evaluation | Requires additional inputs | Original preparation records, registration/archive closure, token caches, checkpoint/run state and pinned pretrained bases |
+
+The fresh-download audit on **16 November 2026** fetched all **191 GitHub files** and **538 dataset files**, checked their identities, and ran both reanalysis modes in a separate Python 3.12 environment. It validated the 6,144 fitting rows and 384 diagnostic rows, and reconstructed accounting for **31,452 ordinary requests**. No models were loaded and no training or new energy evaluations ran. Reanalysis checks the released data and results; it does not establish that a fresh stochastic experiment would produce identical outcomes.
+
 ## Where everything is uploaded
 
 | Location | Uploaded contents | Version |
@@ -51,9 +66,18 @@ hf download bruhrelax/gqe-co2-30q-research-v1 --repo-type dataset --revision 064
 python -I -S .research_data/co2-release/release_tools/release_runtime.py reanalyse
 ```
 
-This verifies the curated checksums, reconstructs the saved result and resource tables, and checks separation of the fitting and diagnostic rows. It uses the standard library, requires no GPU, and starts no training or new energy evaluations. Its optional proposal diagnostics require NumPy. Downloading only selected files will fail the complete-inventory check.
+This verifies the curated checksums, reconstructs the saved result and resource tables, and checks separation of the fitting and diagnostic rows. It uses the standard library, requires no GPU, and starts no training or new energy evaluations. Downloading only selected files will fail the complete-inventory check.
 
-The curated release supports saved-result reanalysis. The original full-workspace authentication commands and production launchers also require the historical archives, registrations, checkpoint states and runtime inputs preserved in the original workspace; a source-only clone does not supply those dependencies. Use the dataset's reproduction guide for the portable release.
+For the additional ledger and proposal checks, use **Python 3.12 or newer** with the pinned NumPy version:
+
+```bash
+python -m pip install numpy==2.5.4
+python -I .research_data/co2-release/release_tools/release_runtime.py reanalyse --proposals
+```
+
+The standard-library check works on Python 3.10 or newer; the pinned NumPy package requires Python 3.12 or newer. Python 3.12 was used for the verified download audit.
+
+The curated release supports saved-result reanalysis. The original full-workspace authentication commands and production launchers also require the historical archives, registrations, checkpoint states and runtime inputs preserved in the original workspace; neither a source-only clone nor the combined curated GitHub/Hugging Face release supplies that complete authenticated workspace. In particular, Sections 7-9 verify their predecessor preparation records and archived source chains; the three exported adapters cannot substitute for resumable training checkpoints. Rebuilding the original PDFs additionally requires unpublished manuscript and historical figure inputs. Use the dataset's reproduction guide for the portable release, and read the uploaded PDFs for the finished reports.
 
 ## Using the trained adapters
 

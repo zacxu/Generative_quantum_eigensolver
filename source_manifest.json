@@ -228,9 +228,9 @@
       "git_blob_sha1": "f90f767d495af6c41ea50bc572c724357f69eacd"
     },
     "README.md": {
-      "bytes": 7616,
-      "sha256": "80ebe6e0b062ed0c2fb27f88e19987366599a717936eda30a8e28522126f7668",
-      "git_blob_sha1": "77d5d001e9ae6534d6e6be01b38c9d18dbd7caad"
+      "bytes": 10076,
+      "sha256": "4e4667cd82c1606d4a9285c4c02dca58bc4f65dbb534ece78ecacaeb3961c44d",
+      "git_blob_sha1": "4b23ec7b43efb4582daea9ee0a2a9e2a1dd6c867"
     },
     "large_qubit/__init__.py": {
       "bytes": 108,
