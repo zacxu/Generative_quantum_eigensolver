@@ -1,10 +1,14 @@
-# Curated source-only release for the completed CO2 study.
-# Deny by default: data, models and scientific outputs live on Hugging Face.
+# Curated source and comprehensive report for the completed CO2 study.
+# Deny by default: datasets, models and other outputs live on Hugging Face.
 # Keep historical artifacts locally; ignoring them does not delete them.
 /*
 !/.gitignore
 !/README.md
 !/source_manifest.json
+
+!/reports/
+/reports/*
+!/reports/comprehensive_report.pdf
 
 !/large_qubit/
 /large_qubit/*
